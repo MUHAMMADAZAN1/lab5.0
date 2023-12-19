@@ -46,3 +46,31 @@ else{
    int filter = (0.21 * r + 0.72 * g + 0.07 * b);
   return round(filter);
 }
+// sepia filter
+int toSepiaRed(int r, int g, int b){
+  int red = (0.393 * r + 0.769 * g + 0.189 * b);
+  if(red>255){
+    return 255;
+      }
+  else{
+    return round(red);
+  }
+}
+int toSepiaGreen(int r, int g, int b){
+  int green = (0.349 * r + 0.686 * g + 0.168 * b);
+   if(green>255){
+    return 255;
+     }
+  else{
+    return round(green);
+  }
+}
+int toSepiaBlue(int r, int g, int b){
+  int blue = (0.272 * r + 0.534 * g + 0.131 * b);
+  if(blue>255){
+    return 255;
+      }
+  else{
+    return round(blue);
+  }
+}
